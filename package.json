@@ -1,1 +1,33 @@
-{"name":"jest-react","version":"1.0.0","private":true,"description":"Jest React","author":"Eric Dobbertin","keywords":["gatsby"],"scripts":{"develop":"gatsby develop","start":"gatsby develop","build":"gatsby build","serve":"gatsby serve","clean":"gatsby clean"},"dependencies":{"gatsby":"^2.32.8","react":"^16.13.1","react-dom":"^16.13.1"}}
+{
+  "name": "jest-react",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jest React",
+  "author": "Eric Dobbertin",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "jest"
+  },
+  "dependencies": {
+    "gatsby": "^2.32.8",
+    "random-words": "^1.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.0",
+    "babel-jest": "^26.6.3",
+    "babel-preset-gatsby": "^0.12.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3"
+  }
+}
