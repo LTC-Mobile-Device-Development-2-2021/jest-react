@@ -34,3 +34,29 @@ test("the select renders with three options, One, Two, and Three", async () => {
     </select>
   `);
 });
+
+test("The select element's value changes after an option is selected", async () => {
+  const { getByRole } = render(<Select />);
+
+  const selectElement = getByRole("combobox");
+
+  await screen.findByText("Two");
+
+  userEvent.selectOptions(selectElement, "Two");
+
+  expect(selectElement).toHaveValue("Two");
+});
+
+test("Calls onChange passing it the new value after an option is selected", async () => {
+  const onChangeTestFn = jest.fn();
+
+  const { getByRole } = render(<Select onChange={onChangeTestFn} />);
+
+  const selectElement = getByRole("combobox");
+
+  await screen.findByText("Two");
+
+  userEvent.selectOptions(selectElement, "Two");
+
+  expect(onChangeTestFn).toHaveBeenLastCalledWith("Two");
+});

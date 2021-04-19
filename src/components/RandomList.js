@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import randomWords from "random-words";
 
-export default function RandomList() {
-  const items = randomWords(5);
+export default function RandomList(props) {
+  const items = randomWords(props.count === undefined ? 6 : props.count);
 
   return (
     <ul>
